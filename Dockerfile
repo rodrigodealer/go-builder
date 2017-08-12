@@ -1,8 +1,9 @@
 FROM golang:1.8
 
-ENV APP_PATH=/go/src/github.com/app
-ENV GOOS=linux
+ENV APP_PATH /go/src/github.com/user/app
+ENV APP_BIN app
+ENV GOOS linux
 
-WORKDIR $APP_PATH
+COPY build.sh /
 
-CMD ["go", "build", "-o", "app"]
+CMD ["sh", "/build.sh"]
