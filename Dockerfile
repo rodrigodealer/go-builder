@@ -1,4 +1,4 @@
-FROM golang:1.8
+FROM golang:1.10
 
 ENV APP_PATH /go/src/github.com/user/app
 ENV APP_BIN app
