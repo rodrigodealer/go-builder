@@ -1,3 +1,4 @@
 cd $APP_PATH
-go build -o $APP_BIN
+rm $APP_BIN
+go build -a -installsuffix cgo -o $APP_BIN .
 upx $APP_BIN

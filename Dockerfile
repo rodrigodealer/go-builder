@@ -1,8 +1,9 @@
-FROM golang:1.10
+FROM golang:1.8
 
 ENV APP_PATH /go/src/github.com/user/app
 ENV APP_BIN app
 ENV GOOS linux
+ENV CGO_ENABLED 0
 
 ADD https://github.com/upx/upx/releases/download/v3.94/upx-3.94-amd64_linux.tar.xz /usr/local
 
